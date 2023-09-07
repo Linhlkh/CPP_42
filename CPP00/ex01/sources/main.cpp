@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 02:26:32 by khle              #+#    #+#             */
-/*   Updated: 2023/09/05 17:38:35 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/06 16:53:38 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int main()
 	{
 		std::cout << "\001\033[1;34m\002" << "Phonebook> " << "\001\033[0;0m\002";
 		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return 0;
 		if (input == "ADD")
 		{
 			std::cout << "Please enter first name:" << std::endl;
@@ -80,6 +82,6 @@ int main()
 		else if (input == "EXIT")
 			break;
 		else
-			std::cout << "Invalid commande" << std::endl;
+			std::cout << "Invalid command" << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 03:32:23 by khle              #+#    #+#             */
-/*   Updated: 2023/09/05 17:41:22 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/06 17:47:28 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,6 @@ int main()
 	s->announce();
 	delete(s);
 	randomChump("Noodle");
+	Zombie a("Burger");
+	a.announce();
 }

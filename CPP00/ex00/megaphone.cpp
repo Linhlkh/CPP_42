@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 04:12:53 by khle              #+#    #+#             */
-/*   Updated: 2023/07/25 01:11:17 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/06 16:44:17 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int main(int ac, char *av[])
 	{
 		for (int j = 0; av[i][j]; j++)
 			putchar(std::toupper(av[i][j]));
-		if (i < ac - 1)
-			std::cout << ' ';
 	}
 	std::cout << std::endl;
 	return 0;

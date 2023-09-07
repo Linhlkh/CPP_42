@@ -6,7 +6,7 @@
 #    By: khle <khle@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/24 06:09:30 by khle              #+#    #+#              #
-#    Updated: 2023/09/05 17:37:33 by khle             ###   ########.fr        #
+#    Updated: 2023/09/06 17:07:50 by khle             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 		$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-		$(RM) $(OBJ_PATH)
+		@$(RM) $(OBJ_PATH)
 			
 fclean: clean
 		@$(RM) $(NAME)

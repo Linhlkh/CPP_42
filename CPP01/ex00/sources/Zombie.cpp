@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 02:05:46 by khle              #+#    #+#             */
-/*   Updated: 2023/09/05 17:41:37 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/06 17:46:45 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 void	Zombie::announce()
 {
 	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+}
+
+Zombie::Zombie()
+{
+	this->name = "Random";
+	std::cout << "Random zombie has creadted" << std::endl;
 }
 
 Zombie::Zombie(std::string name)
