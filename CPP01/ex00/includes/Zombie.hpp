@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 01:56:43 by khle              #+#    #+#             */
-/*   Updated: 2023/09/06 17:41:53 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/07 00:21:00 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ class	Zombie
 	private:
 		std::string		name;
 	public:
-		Zombie(void);
 		Zombie(std::string name);
-		void 			announce(void);
+		void announce(void);
 		~Zombie(void);
 };
 
