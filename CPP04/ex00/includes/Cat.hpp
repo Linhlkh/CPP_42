@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:44:16 by le                #+#    #+#             */
-/*   Updated: 2023/09/04 14:00:00 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 19:54:16 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Cat: public Animal
 		Cat();
 		Cat(const Cat& copy);
 		~Cat();
+
+		Cat &operator=(Cat const& copy);
 
 		void makeSound(void) const;
 };

@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 05:02:05 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 18:11:06 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/07 18:00:50 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed(): fixed_point_num(0)
 
 Fixed::~Fixed()
 {
-    std::cout << "Desstructor called" << std::endl;
+    std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const& origin)
@@ -51,14 +51,14 @@ Fixed::Fixed(const int i): fixed_point_num(i * 256)
     std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float x): fixed_point_num(x * 256)
+Fixed::Fixed(const float x): fixed_point_num(roundf(x * 256))
 {
     std::cout << "Float constructor called" << std::endl;
 }
 
 float Fixed::toFloat() const
 {
-    return (this->fixed_point_num / 256);
+    return ((float)this->fixed_point_num / 256);
 }
 
 int Fixed::toInt() const

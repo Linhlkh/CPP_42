@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 04:16:55 by le                #+#    #+#             */
-/*   Updated: 2023/08/27 20:43:52 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 19:10:58 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class ClapTrap
         
     // overloaded operator
         ClapTrap &operator=(const ClapTrap &src);
-
 
     //getter, setter    
         void    setname(std::string name);

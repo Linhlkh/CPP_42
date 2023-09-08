@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 02:26:32 by khle              #+#    #+#             */
-/*   Updated: 2023/09/06 16:53:38 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/07 20:52:22 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,32 @@ int main()
 		{
 			std::cout << "Please enter first name:" << std::endl;
 			getline(std::cin, data[0]);
+			if (data[0].empty())
+			{
+				std::cout << "Invalid information" << std::endl;
+				continue;
+			}
 			std::cout << "Please enter last name:" << std::endl;
 			getline(std::cin, data[1]);
+			if (data[1].empty())
+			{
+				std::cout << "Invalid information" << std::endl;
+				continue;
+			}
 			std::cout << "Please enter nick name:" << std::endl;
 			getline(std::cin, data[2]);
+			if (data[2].empty())
+			{
+				std::cout << "Invalid information" << std::endl;
+				continue;
+			}
 			std::cout << "Please enter phone number:" << std::endl;
 			getline(std::cin, data[3]);
+			if (data[3].empty())
+			{
+				std::cout << "Invalid information" << std::endl;
+				continue;
+			}
 			while (check_num(data[3]) == 0)
 			{
 				std::cout << "Invalid number, please enter valid number" << std::endl;
@@ -61,6 +81,11 @@ int main()
 			}
 			std::cout << "Please enter darkest secret:" << std::endl;
 			getline(std::cin, data[4]);
+			if (data[4].empty())
+			{
+				std::cout << "Invalid information" << std::endl;
+				continue;
+			}
 			phonebook.add_cts(data);
 			std::cout << "Add contact successfully" << std::endl;
 		}

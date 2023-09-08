@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 02:05:46 by khle              #+#    #+#             */
-/*   Updated: 2023/09/05 17:41:37 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/07 21:04:32 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	Zombie::announce()
 Zombie::Zombie(std::string name)
 {
 	this->name = name;
-	std::cout << "Zombie " << this->name << " has creadted" << std::endl;
+	std::cout << "Zombie " << this->name << " has been created" << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie " << this->name << " has destroyed" << std::endl;
+	std::cout << "Zombie " << this->name << " has been destroyed" << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:44:19 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:49:41 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 20:09:18 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 Dog::Dog() : Animal("Dog")
 {
-    std::cout << "A Dog created." << std::endl;
+    std::cout << "A Dog has been created." << std::endl;
 }
 
 Dog::~Dog()
 {
-    std::cout << "A Dog destroyed." << std::endl;
+    std::cout << "A Dog has been destroyed." << std::endl;
 }
 
 Dog::Dog(const Dog& copy) : Animal(copy)
 {
-    std::cout << "Copy constructor for Dog called." << std::endl;
+    std::cout << "Dog: Copy constructor called." << std::endl;
+}
+
+Dog &Dog::operator=(Dog const& copy)
+{
+	Animal::operator=(copy);
+	return *this;
 }
 
 void Dog::makeSound() const

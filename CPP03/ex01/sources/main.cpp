@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 04:16:59 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:39:28 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 19:07:30 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int main()
 {
     ScavTrap Aa("Coconut");
-    std::cout<<Aa << std::endl;
+    std::cout<<Aa << std::endl << std::endl;
+	
     Aa.attack("Mango");
-    std::cout<<Aa << std::endl;
-    Aa.takeDamage(10);
-    std::cout<<Aa << std::endl;
+    std::cout<<Aa << std::endl << std::endl;
+	
+    Aa.takeDamage(1001);
+    std::cout<<Aa << std::endl << std::endl;
     Aa.guardGate();
 
     ScavTrap Bb(Aa);

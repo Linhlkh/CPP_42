@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:19:52 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:49:27 by le               ###   ########.fr       */
+/*   Updated: 2023/09/09 00:55:27 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 Animal::Animal()
 {
-    std::cout << "An animal created." << std::endl;
+    std::cout << "An animal has been created." << std::endl;
 }
 
 Animal::~Animal()
 {
-    std::cout << "An animal destroyed." << std::endl;
+    std::cout << "An animal has been destroyed." << std::endl;
 }
 
 Animal::Animal(std::string name)
 {
-    this->type = name;
+	this->type = name;
+    std::cout << "Animal: " << this->type << " has been created." << std::endl;
 }
 
 Animal::Animal(const Animal& copy)
@@ -42,4 +43,9 @@ Animal &Animal::operator=(const Animal& equal)
 {
     this->type = equal.type;
     return *this;
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "Random Animal sound." << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 04:16:59 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:43:57 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 19:18:36 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int main()
 {
     FragTrap Aa("Hamburger");
-    std::cout<<Aa << std::endl;
+    std::cout<<Aa << std::endl << std::endl;
     Aa.attack("Noodle");
-    std::cout<<Aa << std::endl;
+    std::cout<<Aa << std::endl << std::endl;
     Aa.takeDamage(10);
-    std::cout<<Aa << std::endl;
+    std::cout<<Aa << std::endl << std::endl;
     Aa.highFivesGuy();
     std::cout<<Aa << std::endl << std::endl;
 

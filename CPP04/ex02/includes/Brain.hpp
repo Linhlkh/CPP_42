@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:52:52 by le                #+#    #+#             */
-/*   Updated: 2023/09/04 17:24:32 by le               ###   ########.fr       */
+/*   Updated: 2023/09/09 00:17:25 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ class Brain
     protected:
         std::string ideas[100];
     public:
-        Brain();
+        Brain(void);
         Brain(const Brain& copy);
-        ~Brain();
+        ~Brain(void);
 
-        std::string*    getideas(void);
-        void            setideas(std::string idea);
-        
         Brain &operator=(const Brain& equal);
+
+        std::string  	getidea(int index);
+        void            setidea(std::string idea, int index); 
 };
 
 #endif

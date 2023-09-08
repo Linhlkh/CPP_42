@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 04:16:51 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:23:26 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 18:58:07 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 //Constructor
 
-ClapTrap::ClapTrap() : hit_point(10), energy_point(10), attack_damage(0)
+ClapTrap::ClapTrap() : name("Random"), hit_point(10), energy_point(10), attack_damage(0)
 {
-    std::cout << "ClapTrap created" << std::endl;
+    std::cout << "Random ClapTrap has been created" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) :  name(name), hit_point(10), energy_point(10), attack_damage(0)
 {
-    std::cout << "ClapTrap " << this->getname() << " created" << std::endl;
+    std::cout << "ClapTrap " << this->name << " has been created" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap destroyed" << std::endl;
+    std::cout << "ClapTrap " << this->name << " has been destroyed" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy)
@@ -38,10 +38,10 @@ ClapTrap::ClapTrap(const ClapTrap& copy)
 // overloaded operator
 ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 {
-    this->setname(src.getname());
-    this->sethit_point(src.gethit_point());
-    this->setenergy_point(src.getenergy_point());
-    this->setattack_point(src.getattack_point());
+	this->name = src.name;
+    this->hit_point = src.hit_point;
+    this->energy_point = src.energy_point;
+    this->attack_damage = src.attack_damage;
 	return *this;
 }
 
@@ -89,51 +89,53 @@ unsigned int	ClapTrap::getattack_point(void) const
 //action
 void    ClapTrap::attack(const std::string& target)
 {
-	if (this->getenergy_point() == 0)
+	if (this->energy_point == 0)
 	{
-		std::cout << this->getname() << " doesn't have enough energy to attack"
+		std::cout << this->name << " doesn't have enough energy to attack"
 		<< std::endl;
 	}
-	else if (this->gethit_point() == 0)
+	else if (this->hit_point == 0)
 	{
-		std::cout << this->getname() << " doesn't have enough hit point to attack"
+		std::cout << this->name << " doesn't have enough hit point to attack"
 		<< std::endl;
 	}
 	else
 	{
-		std::cout << this->getname() << " attack " << target
-		<< " causing " << this->getattack_point() << " point of damage!" << std::endl;
+		std::cout << this->name << " attack " << target
+		<< " causing " << this->attack_damage << " point of damage!" << std::endl;
 		this->setenergy_point(this->getenergy_point() - 1);
 	}
 }
+
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->gethit_point() >= amount)
+	if (this->hit_point >= amount)
 	{
 		this->sethit_point(this->gethit_point() - amount);
 	}
-	else if (this->gethit_point() > 0)
+	else if (this->hit_point > 0)
 	{
 		this->sethit_point(0);
 	}
 	else
 	{
-		std::cout << this->getname() << " is already dead, cannot take any damage." << std::endl;
+		std::cout << this->name << " is already dead, cannot take any damage." << std::endl;
 		return ;
 	}
-	std::cout << this->getname() << " was attacked and lost "
-	<< amount << " hit point, " << this->gethit_point() << " hit point left."
+	std::cout << this->name << " was attacked and lost "
+	<< amount << " hit point, " << this->hit_point << " hit point left."
 	<<std::endl;
 }
+
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->getenergy_point() == 0)
+	if (this->energy_point == 0)
 		std::cout << this->name << " doesn't have enough energy to repair itself"
 		<< std::endl;
-	else if (this -> gethit_point() == 0)
+	else if (this -> hit_point == 0)
 		std::cout << this->name << " doesn't have enough hit point to repair itself"
 		<< std::endl;
-	else if (this->gethit_point() + amount <= 10)
+	else if (this->hit_point + amount <= 10)
 	{
 		this->sethit_point(this->gethit_point() + amount);
 		std::cout << this->name << " repaired itself and has " << this->hit_point

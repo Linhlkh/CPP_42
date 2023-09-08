@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:52:43 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:58:00 by le               ###   ########.fr       */
+/*   Updated: 2023/09/09 00:33:11 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-    std::cout << "Brain created." << std::endl;
+    std::cout << "Brain has been created." << std::endl;
 }
 
 Brain::Brain(const Brain& copy)
@@ -25,18 +25,7 @@ Brain::Brain(const Brain& copy)
 
 Brain::~Brain()
 {
-    std::cout << "Brain destroyed." << std::endl;
-}
-
-std::string* Brain::getideas()
-{
-    return (this->ideas);
-}
-
-void Brain::setideas(std::string idea)
-{
-    for(int i = 0; i < 100; i++)
-        this->ideas[i] = idea;
+    std::cout << "Brain has been destroyed." << std::endl;
 }
 
 Brain &Brain::operator=(const Brain& equal)
@@ -44,4 +33,20 @@ Brain &Brain::operator=(const Brain& equal)
     for (int i = 0; i < 100; i++)
         this->ideas[i] = equal.ideas[i];
     return *this;
+}
+
+std::string Brain::getidea(int index)
+{
+    return (this->ideas[index]);
+}
+
+void Brain::setidea(std::string idea, int index)
+{
+	if (index <100)
+		this->ideas[index] = idea;
+	else
+	{
+		std::cout << "Error index" << std::endl;
+		return ;
+	}
 }

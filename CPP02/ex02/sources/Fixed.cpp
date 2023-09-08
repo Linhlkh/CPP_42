@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 05:02:05 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 18:11:21 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/08 01:04:30 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ std::ostream	&operator<<(std::ostream& str, Fixed const& nbr)
 	return str;
 }
 
-// ex03
+// ex02
 
 //arithmetic operator
 

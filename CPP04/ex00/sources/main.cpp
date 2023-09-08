@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:19:41 by le                #+#    #+#             */
-/*   Updated: 2023/09/05 15:49:52 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 21:25:51 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,11 @@ const Animal* meta = new Animal();
 const Animal* j = new Dog();
 const WrongAnimal* i = new WrongCat();
 std::cout << j->gettype() << " " << std::endl;
-std::cout << i->gettype() << " " << std::endl;
-i->makeSound();
+std::cout << i->gettype() << " " << std::endl << std::endl;
 j->makeSound();
+i->makeSound();
 meta->makeSound();
+delete meta;
+delete j;
+delete i;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: le <le@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:19:37 by le                #+#    #+#             */
-/*   Updated: 2023/09/04 14:00:35 by le               ###   ########.fr       */
+/*   Updated: 2023/09/08 20:17:38 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ class Animal
 		Animal();
 		Animal(std::string name);
 		Animal(const Animal& copy);
-		~Animal();
+		virtual ~Animal();
 		
 		std::string gettype() const;
 		
 		Animal &operator=(const Animal& equal);
-		virtual void makeSound(void) const {};
+		virtual void makeSound(void) const;
 };
 
 #endif
