@@ -6,7 +6,7 @@
 /*   By: khle <khle@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:19:37 by le                #+#    #+#             */
-/*   Updated: 2023/09/08 21:36:02 by khle             ###   ########.fr       */
+/*   Updated: 2023/09/09 01:24:52 by khle             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
 		std::string gettype() const;
 		
 		Animal &operator=(const Animal& equal);
-		virtual void makeSound(void) const;
+		virtual void makeSound(void) const = 0;
 };
 
 #endif
